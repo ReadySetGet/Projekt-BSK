@@ -1,0 +1,254 @@
+\doxysection{Solution\+GUI.\+Solution\+GUI Class Reference}
+\hypertarget{class_solution_g_u_i_1_1_solution_g_u_i}{}\label{class_solution_g_u_i_1_1_solution_g_u_i}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+
+
+The main app GUI class.  
+
+
+Inheritance diagram for Solution\+GUI.\+Solution\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_solution_g_u_i_1_1_solution_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_a6af96351f85c2ebb61e73582036ba15a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_ac8ec60ca952c6ee2155ab77b93f8f2f9}{generation\+\_\+stages\+\_\+init}} (self)
+\begin{DoxyCompactList}\small\item\em It brings back the {\itshape default settings} of the app. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_af372b641b2eab7e5b4b80f15ab9dcf9a}{proceed\+\_\+sign}} (self)
+\begin{DoxyCompactList}\small\item\em Controller of the signing process. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_afb2294b355ceac06e8ca1505aefbe0ff}{proceed\+\_\+verify}} (self)
+\begin{DoxyCompactList}\small\item\em Controller of the verifying process. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_a1268a9c917b34d924346c6b9df9384ce}{ask\+\_\+for\+\_\+pin}} (self)
+\begin{DoxyCompactList}\small\item\em Getting pin from the user. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_aa109a3721b584ad9c38481b90ef38861}\label{class_solution_g_u_i_1_1_solution_g_u_i_aa109a3721b584ad9c38481b90ef38861} 
+{\bfseries show\+\_\+current\+\_\+arrow} (self, idx)
+\begin{DoxyCompactList}\small\item\em Changes position of the arrow showing currently executed stage to the next stage. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a676957267e2ed3da8c536d5d0fda8f27}\label{class_solution_g_u_i_1_1_solution_g_u_i_a676957267e2ed3da8c536d5d0fda8f27} 
+{\bfseries set\+\_\+texts\+\_\+sign} (self)
+\begin{DoxyCompactList}\small\item\em A {\ttfamily proceed\+\_\+sign()} helper function, changing the messages of the executed stages to their "{}done"{} counterparts, and marking them as such. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ab67660cdba5cf1e078c058f00b0ccdeb}\label{class_solution_g_u_i_1_1_solution_g_u_i_ab67660cdba5cf1e078c058f00b0ccdeb} 
+{\bfseries set\+\_\+texts\+\_\+verify} (self)
+\begin{DoxyCompactList}\small\item\em A {\ttfamily proceed\+\_\+verify()} helper function, changing the messages of the executed stages to their "{}done"{} counterparts, and marking them as such. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_a64d16cd56c26bfa4d693b512e09a0e0a}{find\+\_\+d\+\_\+drive}} (self)
+\begin{DoxyCompactList}\small\item\em Checking the pendrive\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_a99cbeb092504d1cfc414e3863973c273}{on\+\_\+devices\+\_\+changed}} (self)
+\begin{DoxyCompactList}\small\item\em Checking the device setup changes. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a7353b77d76bea179c8db608dd2882bc6}\label{class_solution_g_u_i_1_1_solution_g_u_i_a7353b77d76bea179c8db608dd2882bc6} 
+{\bfseries end\+\_\+listening} (self)
+\begin{DoxyCompactList}\small\item\em A method for ending the listener\textquotesingle{}s thread. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a9418944393c96e7147202e69ce61ec18}\label{class_solution_g_u_i_1_1_solution_g_u_i_a9418944393c96e7147202e69ce61ec18} 
+{\bfseries sign\+\_\+if\+\_\+pendrive\+\_\+on\+\_\+start} (self)
+\begin{DoxyCompactList}\small\item\em A method for a thread to check whether the app should load the key and start the signing proccess on execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a98889b2a026ce2caca3ea7811a24818f}\label{class_solution_g_u_i_1_1_solution_g_u_i_a98889b2a026ce2caca3ea7811a24818f} 
+{\bfseries proceed\+\_\+sign}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a4addf3f3b6e3189fd312ab9b5483bcfc}\label{class_solution_g_u_i_1_1_solution_g_u_i_a4addf3f3b6e3189fd312ab9b5483bcfc} 
+{\bfseries proceed\+\_\+verify}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_aea35acf16b56ee3df819564274edafd2}\label{class_solution_g_u_i_1_1_solution_g_u_i_aea35acf16b56ee3df819564274edafd2} 
+{\bfseries end\+\_\+listening}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_aacf92cbfe066fc2ef5f8cf7a625bc505}\label{class_solution_g_u_i_1_1_solution_g_u_i_aacf92cbfe066fc2ef5f8cf7a625bc505} 
+{\bfseries \+\_\+constants} = Constants(NR\+\_\+\+OF\+\_\+\+STAGES\+\_\+\+SIGNING=6, NR\+\_\+\+OF\+\_\+\+STAGES\+\_\+\+VERIFYING=3)
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a3141c8a08556b7f08f45bbcdd79eeb3b}\label{class_solution_g_u_i_1_1_solution_g_u_i_a3141c8a08556b7f08f45bbcdd79eeb3b} 
+int {\bfseries \+\_\+current\+\_\+stage\+\_\+nr} = 0
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a6320fd0ed85f39c384a3f3c27fe7e877}\label{class_solution_g_u_i_1_1_solution_g_u_i_a6320fd0ed85f39c384a3f3c27fe7e877} 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer}{Solution\+PDFSigner}} {\bfseries \+\_\+signer} = None
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a34c0b02a678dcda22b956d4ed5ec8010}\label{class_solution_g_u_i_1_1_solution_g_u_i_a34c0b02a678dcda22b956d4ed5ec8010} 
+{\bfseries \+\_\+hash\+\_\+comparer} = \mbox{\hyperlink{class_solution_hash_comparer_1_1_solution_hash_comparer}{Solution\+Hash\+Comparer}}()
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a7d3d224c5d4f0614accc79ccecdd7735}\label{class_solution_g_u_i_1_1_solution_g_u_i_a7d3d224c5d4f0614accc79ccecdd7735} 
+{\bfseries \+\_\+listener} = \mbox{\hyperlink{class_device_listener_1_1_device_listener}{Device\+Listener}}(on\+\_\+change=self.\+on\+\_\+devices\+\_\+changed)
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a15ccf3ea97845df577280ffeaa26222c}\label{class_solution_g_u_i_1_1_solution_g_u_i_a15ccf3ea97845df577280ffeaa26222c} 
+bool {\bfseries \+\_\+is\+\_\+d\+\_\+drive\+\_\+connected} = self.\+find\+\_\+d\+\_\+drive()
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a8301d8cc51b87cf35cdc9804ed7c87a5}\label{class_solution_g_u_i_1_1_solution_g_u_i_a8301d8cc51b87cf35cdc9804ed7c87a5} 
+{\bfseries \+\_\+d\+\_\+drive\+\_\+comm} = Qt\+Widgets.\+QLabel("{}Pendrive nie jest podpięty"{} if not self.\+\_\+is\+\_\+d\+\_\+drive\+\_\+connected else "{}Pendrive jest podpięty, klucz został pobrany"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ad3abca938a3a830e47485ba5aa66bb7d}\label{class_solution_g_u_i_1_1_solution_g_u_i_ad3abca938a3a830e47485ba5aa66bb7d} 
+{\bfseries \+\_\+ending\+\_\+comm} = Qt\+Widgets.\+QLabel("{}"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a924f8713e819e1c3681cd2358f05e595}\label{class_solution_g_u_i_1_1_solution_g_u_i_a924f8713e819e1c3681cd2358f05e595} 
+{\bfseries \+\_\+result\+\_\+comm} = Qt\+Widgets.\+QLabel("{}"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a417b2238c59f4dfda4c2fa5fb58d19e3}\label{class_solution_g_u_i_1_1_solution_g_u_i_a417b2238c59f4dfda4c2fa5fb58d19e3} 
+{\bfseries \+\_\+button\+\_\+sign} = Qt\+Widgets.\+QPush\+Button("{}Rozpocznij podpisywanie"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a85cefb2d74f72132357e9232a2591a40}\label{class_solution_g_u_i_1_1_solution_g_u_i_a85cefb2d74f72132357e9232a2591a40} 
+{\bfseries \+\_\+button\+\_\+verify} = Qt\+Widgets.\+QPush\+Button("{}Rozpocznij weryfikacje"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ae7fb5965afa4e91dd8875c3b01d9f7bf}\label{class_solution_g_u_i_1_1_solution_g_u_i_ae7fb5965afa4e91dd8875c3b01d9f7bf} 
+{\bfseries \+\_\+button\+\_\+close} = Qt\+Widgets.\+QPush\+Button("{}Wyjdź z programu"{})
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a09ac6f0d8e6c2362bbf02cd9edf9dd5a}\label{class_solution_g_u_i_1_1_solution_g_u_i_a09ac6f0d8e6c2362bbf02cd9edf9dd5a} 
+{\bfseries \+\_\+layout} = Qt\+Widgets.\+QVBox\+Layout(self)
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ab032c3f9bd3c9eeb01734f3c4175d564}\label{class_solution_g_u_i_1_1_solution_g_u_i_ab032c3f9bd3c9eeb01734f3c4175d564} 
+{\bfseries \+\_\+info} = Qt\+Widgets.\+QWidget(self)
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ad014e704eef8d0fd550b6ceb2655980f}\label{class_solution_g_u_i_1_1_solution_g_u_i_ad014e704eef8d0fd550b6ceb2655980f} 
+{\bfseries \+\_\+grid} = Qt\+Widgets.\+QGrid\+Layout(self.\+\_\+info)
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a34858289ba8d7c10b38a5625a048cd74}\label{class_solution_g_u_i_1_1_solution_g_u_i_a34858289ba8d7c10b38a5625a048cd74} 
+list {\bfseries \+\_\+start\+\_\+texts\+\_\+sign} = \mbox{[}"{}Podaj PIN\+:"{}, "{}Wybieranie dokumentu"{}, "{}Rozpoczęto hashowanie PIN-\/u"{}, "{}Rozpoczęto deszyfrowanie klucza"{}, "{}Rozpoczęto przygotowanie dokumentu"{}, "{}Rozpoczęto podpisywanie dokumentu"{}\mbox{]}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_af3c7411f489bfb101e8f6a1ea54f748e}\label{class_solution_g_u_i_1_1_solution_g_u_i_af3c7411f489bfb101e8f6a1ea54f748e} 
+list {\bfseries \+\_\+end\+\_\+texts\+\_\+sign} = \mbox{[}"{}Pobrano PIN"{}, "{}Zakończono wybieranie dokumentu"{}, "{}Zakończono hashowanie PIN-\/u"{}, "{}Zakończono deszyfrowanie klucza"{}, "{}Zakończono przygotowanie dokumentu"{}, "{}Zakończono podpisywanie dokumentu"{}\mbox{]}
+\item 
+list \mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_a4fdbe33d713f48fdb9d1ea25ca50d6b8}{\+\_\+start\+\_\+texts\+\_\+verify}}
+\item 
+list \mbox{\hyperlink{class_solution_g_u_i_1_1_solution_g_u_i_ad45eea13f54962139e30e0cc09c22c72}{\+\_\+end\+\_\+texts\+\_\+verify}}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_aa8b403af467de2573636aca4935e1d08}\label{class_solution_g_u_i_1_1_solution_g_u_i_aa8b403af467de2573636aca4935e1d08} 
+str {\bfseries \+\_\+ending\+\_\+comm\+\_\+text} = "{}Wykonano wszystkie zadania"{}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a463cea5f4bce04aa206b9b8dfaa74657}\label{class_solution_g_u_i_1_1_solution_g_u_i_a463cea5f4bce04aa206b9b8dfaa74657} 
+list {\bfseries \+\_\+stage\+\_\+comms} = \mbox{[}$\,$\mbox{]}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a51bd1bffbd0d08a227d3c95bba3420f3}\label{class_solution_g_u_i_1_1_solution_g_u_i_a51bd1bffbd0d08a227d3c95bba3420f3} 
+list {\bfseries \+\_\+stage\+\_\+checks} = \mbox{[}$\,$\mbox{]}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a651f248550c072ee21f1225b58bd1c8f}\label{class_solution_g_u_i_1_1_solution_g_u_i_a651f248550c072ee21f1225b58bd1c8f} 
+list {\bfseries \+\_\+arrows} = \mbox{[}$\,$\mbox{]}
+\item 
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a24d9748577e9ff468d5944ba42d9f277}\label{class_solution_g_u_i_1_1_solution_g_u_i_a24d9748577e9ff468d5944ba42d9f277} 
+{\bfseries \+\_\+listener\+Thread} = \mbox{\hyperlink{class_d_l_thread_1_1_d_l_thread}{DLThread}}(target=self.\+\_\+listener.\+start)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main app GUI class. 
+
+It realizes all the functionalities of this package. 
+
+\label{doc-constructors}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a6af96351f85c2ebb61e73582036ba15a}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_a6af96351f85c2ebb61e73582036ba15a} 
+Solution\+GUI.\+Solution\+GUI.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+It Initializes all the widget\textquotesingle{}s elements, used constants, and places them in the layout. 
+
+\label{doc-func-members}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a1268a9c917b34d924346c6b9df9384ce}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!ask\_for\_pin@{ask\_for\_pin}}
+\index{ask\_for\_pin@{ask\_for\_pin}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{ask\_for\_pin()}{ask\_for\_pin()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_a1268a9c917b34d924346c6b9df9384ce} 
+Solution\+GUI.\+Solution\+GUI.\+ask\+\_\+for\+\_\+pin (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Getting pin from the user. 
+
+It shows a {\ttfamily QInput\+Dialog} instance to the user, and checks whether the pin provided has numerical value. \Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a64d16cd56c26bfa4d693b512e09a0e0a}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!find\_d\_drive@{find\_d\_drive}}
+\index{find\_d\_drive@{find\_d\_drive}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{find\_d\_drive()}{find\_d\_drive()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_a64d16cd56c26bfa4d693b512e09a0e0a} 
+Solution\+GUI.\+Solution\+GUI.\+find\+\_\+d\+\_\+drive (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Checking the pendrive\textquotesingle{}s status. 
+
+It calls the listener\textquotesingle{}s {\ttfamily list\+\_\+drives()} function, and checks if the pendrive (with a private key present) is amongst them.
+
+\begin{DoxyReturn}{Returns}
+(bool) whether the pendrive with a key was found or 
+\end{DoxyReturn}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ac8ec60ca952c6ee2155ab77b93f8f2f9}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!generation\_stages\_init@{generation\_stages\_init}}
+\index{generation\_stages\_init@{generation\_stages\_init}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{generation\_stages\_init()}{generation\_stages\_init()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_ac8ec60ca952c6ee2155ab77b93f8f2f9} 
+Solution\+GUI.\+Solution\+GUI.\+generation\+\_\+stages\+\_\+init (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+It brings back the {\itshape default settings} of the app. 
+
+It brings back the {\itshape default settings} of the app, clearing all the labels and enabling the buttons accordingly (based on whether the pendrive is available). \Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a99cbeb092504d1cfc414e3863973c273}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!on\_devices\_changed@{on\_devices\_changed}}
+\index{on\_devices\_changed@{on\_devices\_changed}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{on\_devices\_changed()}{on\_devices\_changed()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_a99cbeb092504d1cfc414e3863973c273} 
+Solution\+GUI.\+Solution\+GUI.\+on\+\_\+devices\+\_\+changed (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Checking the device setup changes. 
+
+It\textquotesingle{}s called by \doxylink{namespace_device_listener}{Device\+Listener} class when a change in drives\textquotesingle{} configuration has been detected. It calls the {\ttfamily \doxylink{class_solution_g_u_i_1_1_solution_g_u_i_a64d16cd56c26bfa4d693b512e09a0e0a}{find\+\_\+d\+\_\+drive()}} method to ascertain the desired pendrive\textquotesingle{}s presence, and if so, it loads the encrypted private key (via initializing the \doxylink{namespace_solution_p_d_f_signer}{Solution\+PDFSigner} class), and starts the signing process. \Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_af372b641b2eab7e5b4b80f15ab9dcf9a}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!proceed\_sign@{proceed\_sign}}
+\index{proceed\_sign@{proceed\_sign}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{proceed\_sign()}{proceed\_sign()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_af372b641b2eab7e5b4b80f15ab9dcf9a} 
+Solution\+GUI.\+Solution\+GUI.\+proceed\+\_\+sign (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Controller of the signing process. 
+
+Controller of the signing process. It resets the app with {\ttfamily \doxylink{class_solution_g_u_i_1_1_solution_g_u_i_ac8ec60ca952c6ee2155ab77b93f8f2f9}{generation\+\_\+stages\+\_\+init()}}, and executes all the steps necessary for the signing process to succeed, by invoking the adequate methods of \doxylink{namespace_solution_p_d_f_signer}{Solution\+PDFSigner} class. It shows the user all relevant progress messages, and changes the position of the progress arrow. Lastly, it presents the result of actions taken to the user. \Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_afb2294b355ceac06e8ca1505aefbe0ff}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!proceed\_verify@{proceed\_verify}}
+\index{proceed\_verify@{proceed\_verify}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{proceed\_verify()}{proceed\_verify()}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_afb2294b355ceac06e8ca1505aefbe0ff} 
+Solution\+GUI.\+Solution\+GUI.\+proceed\+\_\+verify (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Controller of the verifying process. 
+
+Controller of the verifying process. It resets the app with {\ttfamily \doxylink{class_solution_g_u_i_1_1_solution_g_u_i_ac8ec60ca952c6ee2155ab77b93f8f2f9}{generation\+\_\+stages\+\_\+init()}}, and executes all the steps necessary for the signing process to succeed, by invoking the adequate methods of \doxylink{namespace_solution_hash_comparer}{Solution\+Hash\+Comparer} class. It shows the user all relevant progress messages, and changes the position of the progress arrow. Lastly, it presents the result of actions taken to the user. 
+
+\label{doc-variable-members}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_ad45eea13f54962139e30e0cc09c22c72}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!\_end\_texts\_verify@{\_end\_texts\_verify}}
+\index{\_end\_texts\_verify@{\_end\_texts\_verify}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{\_end\_texts\_verify}{\_end\_texts\_verify}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_ad45eea13f54962139e30e0cc09c22c72} 
+list Solution\+GUI.\+Solution\+GUI.\+\_\+end\+\_\+texts\+\_\+verify\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [\textcolor{stringliteral}{"{}Zakończono\ wybieranie\ dokumentu"{}},\ \textcolor{stringliteral}{"{}Zakończono\ pobieranie\ klucza\ publicznego"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Zakończono\ weryfikację"{}}]}
+
+\end{DoxyCode}
+\Hypertarget{class_solution_g_u_i_1_1_solution_g_u_i_a4fdbe33d713f48fdb9d1ea25ca50d6b8}\index{SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}!\_start\_texts\_verify@{\_start\_texts\_verify}}
+\index{\_start\_texts\_verify@{\_start\_texts\_verify}!SolutionGUI.SolutionGUI@{SolutionGUI.SolutionGUI}}
+\doxysubsubsection{\texorpdfstring{\_start\_texts\_verify}{\_start\_texts\_verify}}
+{\footnotesize\ttfamily \label{class_solution_g_u_i_1_1_solution_g_u_i_a4fdbe33d713f48fdb9d1ea25ca50d6b8} 
+list Solution\+GUI.\+Solution\+GUI.\+\_\+start\+\_\+texts\+\_\+verify\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [\textcolor{stringliteral}{"{}Wybieranie\ dokumentu"{}},\ \textcolor{stringliteral}{"{}Rozpoczęto\ pobieranie\ klucza\ publicznego"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Rozpoczęto\ weryfikację"{}}]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Solution\+GUI.\+py\end{DoxyCompactItemize}

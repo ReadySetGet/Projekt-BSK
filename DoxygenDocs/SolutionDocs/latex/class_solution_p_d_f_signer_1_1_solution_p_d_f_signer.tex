@@ -1,0 +1,198 @@
+\doxysection{Solution\+PDFSigner.\+Solution\+PDFSigner Class Reference}
+\hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer}{}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+
+
+The signer class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6ddee0ecd30b3ed93af11aef30f7539f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_ac7065e9c6d45b3dce26b3ebd286f5f15}{set\+\_\+file}} (self, path, file)
+\begin{DoxyCompactList}\small\item\em A setter for all pdf-\/related information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aec7dcffa7e4b1c5699140b2e9ecadf0b}{hash\+\_\+pin}} (self, pin)
+\begin{DoxyCompactList}\small\item\em It hashes the pin provided. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a67876c76bee1b6524021398e6042d935}{decrypt}} (self)
+\begin{DoxyCompactList}\small\item\em It decrypts the private key the hash of the pin provided. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7617b8d2bf2e3f78a60d93dace5bd084}{prepare\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em It conducts all the necessary preparations before signing the chosen pdf\+: add a signature field to the pdf, sets the signature type to PAd\+ES, and initializes an adequate PAd\+ES signer object. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aa4bec8c5440ae61aea197ac9b0fc6be4}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aa4bec8c5440ae61aea197ac9b0fc6be4} 
+{\bfseries sign} (self)
+\begin{DoxyCompactList}\small\item\em It signs and saves the pdf, using setting set in the {\ttfamily \doxylink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7617b8d2bf2e3f78a60d93dace5bd084}{prepare\+\_\+file()}} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6cd98418f7bd126b65691649b90302d2}{\+\_\+constants}}
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aacc3aed50101f8bd0dce697994d2bf98}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aacc3aed50101f8bd0dce697994d2bf98} 
+{\bfseries \+\_\+path\+\_\+to\+\_\+ske} = self.\+\_\+constants.\+PATH\+\_\+\+TO\+\_\+\+PRIVATE\+\_\+\+KEY
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a8c82d942538beb97f21a112478a9b568}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a8c82d942538beb97f21a112478a9b568} 
+{\bfseries \+\_\+signing\+\_\+key\+\_\+encrypted} = file.\+read()
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a209819412bf5555d53c070832636b249}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a209819412bf5555d53c070832636b249} 
+{\bfseries \+\_\+signing\+\_\+key} = None
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7c728f7305b0877f42b6b60f5521a8cd}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7c728f7305b0877f42b6b60f5521a8cd} 
+{\bfseries \+\_\+file\+\_\+to\+\_\+sign\+\_\+path} = None
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a0b7d75a641a1c4a69d7f73faa694a682}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a0b7d75a641a1c4a69d7f73faa694a682} 
+{\bfseries \+\_\+file\+\_\+to\+\_\+sign} = None
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a3dd1096168aecfe6d957a2059dba0eec}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a3dd1096168aecfe6d957a2059dba0eec} 
+{\bfseries \+\_\+hashed\+\_\+pin} = None
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aba06c6669b4e1c18de60edd70ac86f3a}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aba06c6669b4e1c18de60edd70ac86f3a} 
+{\bfseries \+\_\+hashed\+\_\+file} = None
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a05169b28173c3c8a0a5a4656f063538a}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a05169b28173c3c8a0a5a4656f063538a} 
+{\bfseries \+\_\+merger} = Pdf\+Writer()
+\item 
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a81c11e0547099f5c90b78077d441d02f}\label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a81c11e0547099f5c90b78077d441d02f} 
+{\bfseries \+\_\+signature} = None
+\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4ccc6f931ccc1472fefd055a3a53695f}{\+\_\+cms\+\_\+signer}}
+\item 
+\mbox{\hyperlink{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4530c6c04c9da84e68e6a6f3ad171a6c}{\+\_\+signature\+\_\+meta}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The signer class. 
+
+It realizes all the functionalities of this package. 
+
+\label{doc-constructors}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6ddee0ecd30b3ed93af11aef30f7539f}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6ddee0ecd30b3ed93af11aef30f7539f} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+It sets the used constants and loads the encrypted private key from a file. 
+
+\label{doc-func-members}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a67876c76bee1b6524021398e6042d935}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a67876c76bee1b6524021398e6042d935} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+decrypt (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+It decrypts the private key the hash of the pin provided. 
+
+\begin{DoxyReturn}{Returns}
+(bool) whether the key was decrypted correctly or not (in other words, if the pin was correct) 
+\end{DoxyReturn}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aec7dcffa7e4b1c5699140b2e9ecadf0b}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!hash\_pin@{hash\_pin}}
+\index{hash\_pin@{hash\_pin}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{hash\_pin()}{hash\_pin()}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_aec7dcffa7e4b1c5699140b2e9ecadf0b} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+hash\+\_\+pin (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{pin}{}\end{DoxyParamCaption})}
+
+
+
+It hashes the pin provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & (int)\+: pin \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7617b8d2bf2e3f78a60d93dace5bd084}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!prepare\_file@{prepare\_file}}
+\index{prepare\_file@{prepare\_file}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{prepare\_file()}{prepare\_file()}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a7617b8d2bf2e3f78a60d93dace5bd084} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+prepare\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+It conducts all the necessary preparations before signing the chosen pdf\+: add a signature field to the pdf, sets the signature type to PAd\+ES, and initializes an adequate PAd\+ES signer object. 
+
+\begin{DoxyReturn}{Returns}
+1\+: the method succeeded 
+
+0\+: pdf has already been signed 
+
+-\/1\+: no writing permissions 
+\end{DoxyReturn}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_ac7065e9c6d45b3dce26b3ebd286f5f15}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!set\_file@{set\_file}}
+\index{set\_file@{set\_file}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{set\_file()}{set\_file()}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_ac7065e9c6d45b3dce26b3ebd286f5f15} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+set\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{path}{, }\item[{}]{file}{}\end{DoxyParamCaption})}
+
+
+
+A setter for all pdf-\/related information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & (str)\+: path to the pdf, without its name \+:param file (str)\+: name of the pdf \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4ccc6f931ccc1472fefd055a3a53695f}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!\_cms\_signer@{\_cms\_signer}}
+\index{\_cms\_signer@{\_cms\_signer}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{\_cms\_signer}{\_cms\_signer}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4ccc6f931ccc1472fefd055a3a53695f} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+\_\+cms\+\_\+signer\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ signers.SimpleSigner.load(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ self.\_constants.PATH\_TO\_PRIVATE\_KEY,\ \textcolor{stringliteral}{"{}C:/Studia/BSK/ProjektBSK/AuxiliaryApp/certyfikat.pem"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ key\_passphrase=self.\_hashed\_pin.digest()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6cd98418f7bd126b65691649b90302d2}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!\_constants@{\_constants}}
+\index{\_constants@{\_constants}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{\_constants}{\_constants}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a6cd98418f7bd126b65691649b90302d2} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+\_\+constants\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ Constants(LENGTH\_OF\_RSA\_KEY=4096,\ KEY\_FORMAT=\textcolor{stringliteral}{'PEM'},\ CIPHER\_MODE=AES.MODE\_CBC,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PATH\_FOR\_SIGNED\_FILES=\textcolor{stringliteral}{"{}C:/Studia/BSK/ProjektBSK/Solution/"{}},\ PATH\_TO\_PRIVATE\_KEY=\textcolor{stringliteral}{"{}D:/ProjectBSKPrivateKey.pem"{}})}
+
+\end{DoxyCode}
+\Hypertarget{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4530c6c04c9da84e68e6a6f3ad171a6c}\index{SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}!\_signature\_meta@{\_signature\_meta}}
+\index{\_signature\_meta@{\_signature\_meta}!SolutionPDFSigner.SolutionPDFSigner@{SolutionPDFSigner.SolutionPDFSigner}}
+\doxysubsubsection{\texorpdfstring{\_signature\_meta}{\_signature\_meta}}
+{\footnotesize\ttfamily \label{class_solution_p_d_f_signer_1_1_solution_p_d_f_signer_a4530c6c04c9da84e68e6a6f3ad171a6c} 
+Solution\+PDFSigner.\+Solution\+PDFSigner.\+\_\+signature\+\_\+meta\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ signers.PdfSignatureMetadata(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ field\_name=\textcolor{stringliteral}{'Signature'},\ md\_algorithm=\textcolor{stringliteral}{'sha256'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Mark\ the\ signature\ as\ a\ PAdES\ signature}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ subfilter=SigSeedSubFilter.PADES,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Tell\ pyHanko\ to\ put\ in\ an\ extra\ DocumentTimeStamp}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ to\ kick\ off\ the\ PAdES-\/LTA\ timestamp\ chain.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ use\_pades\_lta=\textcolor{keyword}{False}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Solution\+PDFSigner.\+py\end{DoxyCompactItemize}

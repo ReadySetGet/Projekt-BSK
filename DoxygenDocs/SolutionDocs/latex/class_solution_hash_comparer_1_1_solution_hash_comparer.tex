@@ -1,0 +1,129 @@
+\doxysection{Solution\+Hash\+Comparer.\+Solution\+Hash\+Comparer Class Reference}
+\hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer}{}\label{class_solution_hash_comparer_1_1_solution_hash_comparer}\index{SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}}
+
+
+The verifier class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_hash_comparer_1_1_solution_hash_comparer_a10887a30543a58c59843b815f2ab15d4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_hash_comparer_1_1_solution_hash_comparer_a3262bf203159999e66d6dc9e4d88267e}{set\+\_\+file}} (self, path, name)
+\begin{DoxyCompactList}\small\item\em A setter for all pdf-\/related information. \end{DoxyCompactList}\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_ad331dea244d9fc8216e2106db658da11}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_ad331dea244d9fc8216e2106db658da11} 
+{\bfseries set\+\_\+public\+\_\+key} (self)
+\begin{DoxyCompactList}\small\item\em It loads the public key and its certificate from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_hash_comparer_1_1_solution_hash_comparer_ac268c3302a08b1cb7baf911b4eb8bb2b}{verify}} (self)
+\begin{DoxyCompactList}\small\item\em It validates the signature, based on the public key and certificate loaded by {\ttfamily \doxylink{class_solution_hash_comparer_1_1_solution_hash_comparer_ad331dea244d9fc8216e2106db658da11}{set\+\_\+public\+\_\+key()}} method It then prints the process\textquotesingle{} details to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_hash_comparer_1_1_solution_hash_comparer_afc3e1e50841d38a3a7bbb469b7b8ae5a}{\+\_\+constants}}
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a0090adabaf9fbd79d09364fb200993f6}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_a0090adabaf9fbd79d09364fb200993f6} 
+{\bfseries \+\_\+public\+\_\+key} = None
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a8a1a8d11da3e3f4984658749519630a4}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_a8a1a8d11da3e3f4984658749519630a4} 
+{\bfseries \+\_\+file\+\_\+path} = None
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a992f17dfd82dd6de193c6b505f8d1693}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_a992f17dfd82dd6de193c6b505f8d1693} 
+{\bfseries \+\_\+file\+\_\+name} = None
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_acd616dc9b6f64ae950a8cd7908b607a3}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_acd616dc9b6f64ae950a8cd7908b607a3} 
+{\bfseries \+\_\+signature} = None
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_ac49d7dbac6c341f8c556cdde48dbcf08}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_ac49d7dbac6c341f8c556cdde48dbcf08} 
+{\bfseries \+\_\+hashed\+\_\+file} = None
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a2852c523c1fe19779025d504cd6dd4d6}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_a2852c523c1fe19779025d504cd6dd4d6} 
+{\bfseries \+\_\+vc} = Validation\+Context(trust\+\_\+roots=\mbox{[}root\+\_\+cert\mbox{]})
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_abd709df7fad0370088bc68dbbde1e935}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_abd709df7fad0370088bc68dbbde1e935} 
+{\bfseries \+\_\+r} = Pdf\+File\+Reader(doc, strict=False)
+\item 
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_ac70d34b95d027b29717d0c7874a75ee4}\label{class_solution_hash_comparer_1_1_solution_hash_comparer_ac70d34b95d027b29717d0c7874a75ee4} 
+{\bfseries \+\_\+sig} = self.\+\_\+r.\+embedded\+\_\+signatures\mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The verifier class. 
+
+It realizes all the functionalities of this package. 
+
+\label{doc-constructors}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a10887a30543a58c59843b815f2ab15d4}\index{SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_solution_hash_comparer_1_1_solution_hash_comparer_a10887a30543a58c59843b815f2ab15d4} 
+Solution\+Hash\+Comparer.\+Solution\+Hash\+Comparer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+It sets the constants used. 
+
+\label{doc-func-members}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_a3262bf203159999e66d6dc9e4d88267e}\index{SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}!set\_file@{set\_file}}
+\index{set\_file@{set\_file}!SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}}
+\doxysubsubsection{\texorpdfstring{set\_file()}{set\_file()}}
+{\footnotesize\ttfamily \label{class_solution_hash_comparer_1_1_solution_hash_comparer_a3262bf203159999e66d6dc9e4d88267e} 
+Solution\+Hash\+Comparer.\+Solution\+Hash\+Comparer.\+set\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{path}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+
+
+A setter for all pdf-\/related information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & (str)\+: path to the pdf, without its name \\
+\hline
+{\em file} & (str)\+: name of the pdf \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_ac268c3302a08b1cb7baf911b4eb8bb2b}\index{SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}!verify@{verify}}
+\index{verify@{verify}!SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily \label{class_solution_hash_comparer_1_1_solution_hash_comparer_ac268c3302a08b1cb7baf911b4eb8bb2b} 
+Solution\+Hash\+Comparer.\+Solution\+Hash\+Comparer.\+verify (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+It validates the signature, based on the public key and certificate loaded by {\ttfamily \doxylink{class_solution_hash_comparer_1_1_solution_hash_comparer_ad331dea244d9fc8216e2106db658da11}{set\+\_\+public\+\_\+key()}} method It then prints the process\textquotesingle{} details to the console. 
+
+\begin{DoxyReturn}{Returns}
+1\+: the signature is valid 
+
+0\+: the signature is invalid 
+
+-\/1\+: the chosen file has no signature to verify 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_solution_hash_comparer_1_1_solution_hash_comparer_afc3e1e50841d38a3a7bbb469b7b8ae5a}\index{SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}!\_constants@{\_constants}}
+\index{\_constants@{\_constants}!SolutionHashComparer.SolutionHashComparer@{SolutionHashComparer.SolutionHashComparer}}
+\doxysubsubsection{\texorpdfstring{\_constants}{\_constants}}
+{\footnotesize\ttfamily \label{class_solution_hash_comparer_1_1_solution_hash_comparer_afc3e1e50841d38a3a7bbb469b7b8ae5a} 
+Solution\+Hash\+Comparer.\+Solution\+Hash\+Comparer.\+\_\+constants\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ Constants(LENGTH\_OF\_RSA\_KEY=4096,\ KEY\_FORMAT=\textcolor{stringliteral}{'PEM'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PATH\_FOR\_PUBLIC\_KEY=\textcolor{stringliteral}{"{}C:/Studia/BSK/ProjektBSK/AuxiliaryApp/ProjectBSKPublicKey.pem"{}})}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Solution\+Hash\+Comparer.\+py\end{DoxyCompactItemize}

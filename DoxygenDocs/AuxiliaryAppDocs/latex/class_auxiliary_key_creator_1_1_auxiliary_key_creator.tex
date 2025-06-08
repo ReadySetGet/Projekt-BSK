@@ -1,0 +1,152 @@
+\doxysection{Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator Class Reference}
+\hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator}{}\label{class_auxiliary_key_creator_1_1_auxiliary_key_creator}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+
+
+The generator class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9cfb5a860a514138b613aa91f6a92772}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a7ad2659c91162e62821bab2fbd651a5f}{generate\+\_\+rsa\+\_\+keys}} (self, arg)
+\begin{DoxyCompactList}\small\item\em Main generator method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_af8402e9186bd49e9504baecb3e41733f}{hash\+\_\+pin\+\_\+with\+\_\+sha256}} (self, pin)
+\begin{DoxyCompactList}\small\item\em It hashes the pin provided with SHA256. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a8047c6e91305f6dd1ca737771b18c64e}{cipher\+\_\+key\+\_\+with\+\_\+aes}} (self, pin\+\_\+hash)
+\begin{DoxyCompactList}\small\item\em It encrypts the private key with AES256 algorithm. \end{DoxyCompactList}\item 
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_ad6034f0a609c6a9599c7b7ee6679fda6}\label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_ad6034f0a609c6a9599c7b7ee6679fda6} 
+{\bfseries write\+\_\+public\+\_\+key\+\_\+to\+\_\+file} (self)
+\begin{DoxyCompactList}\small\item\em It writes the public key to a .pem file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_aadb5cd9364c7f706217b574936b96a65}{write\+\_\+private\+\_\+key\+\_\+to\+\_\+pendrive}} (self, key\+\_\+priv\+\_\+with\+\_\+aes)
+\begin{DoxyCompactList}\small\item\em It writes the private key to a .pem file. \end{DoxyCompactList}\item 
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a8ba08ad7cff6be2a83e2c707f3e79473}\label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a8ba08ad7cff6be2a83e2c707f3e79473} 
+{\bfseries gen\+\_\+cert} (self)
+\begin{DoxyCompactList}\small\item\em It generates a certificate based on the generated public key, needed for later PAd\+ES digital signature, and saves it to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9b4b92315ffe2a72e259e1b472f6fd68}{\+\_\+constants}}
+\item 
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_ae9e61672c4eb7663345f58d7a864d556}\label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_ae9e61672c4eb7663345f58d7a864d556} 
+{\bfseries \+\_\+keypair} = RSA.\+generate(self.\+\_\+constants.\+LENGTH\+\_\+\+OF\+\_\+\+RSA\+\_\+\+KEY)
+\item 
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a08f4d332ce04a4f0af27575093de1cc6}\label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a08f4d332ce04a4f0af27575093de1cc6} 
+{\bfseries \+\_\+pin\+\_\+hash} = SHA256.\+new(bytes(pin))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The generator class. 
+
+It realizes all the functionalities of this package. 
+
+\label{doc-constructors}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9cfb5a860a514138b613aa91f6a92772}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9cfb5a860a514138b613aa91f6a92772} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+It sets the constants used. 
+
+\label{doc-func-members}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a8047c6e91305f6dd1ca737771b18c64e}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!cipher\_key\_with\_aes@{cipher\_key\_with\_aes}}
+\index{cipher\_key\_with\_aes@{cipher\_key\_with\_aes}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{cipher\_key\_with\_aes()}{cipher\_key\_with\_aes()}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a8047c6e91305f6dd1ca737771b18c64e} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+cipher\+\_\+key\+\_\+with\+\_\+aes (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{pin\+\_\+hash}{}\end{DoxyParamCaption})}
+
+
+
+It encrypts the private key with AES256 algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin\+\_\+hash} & (bytes)\+: hash of the pin used as AES passphrase\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bytes) the encrypted private key 
+\end{DoxyReturn}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a7ad2659c91162e62821bab2fbd651a5f}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!generate\_rsa\_keys@{generate\_rsa\_keys}}
+\index{generate\_rsa\_keys@{generate\_rsa\_keys}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{generate\_rsa\_keys()}{generate\_rsa\_keys()}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a7ad2659c91162e62821bab2fbd651a5f} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+generate\+\_\+rsa\+\_\+keys (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{arg}{}\end{DoxyParamCaption})}
+
+
+
+Main generator method. 
+
+It generates the RSA keys and exports them to .pem format
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & (\{{\bfseries{setitem}}\})\+: a way of returning the keys to \doxylink{namespace_auxiliary_g_u_i}{Auxiliary\+GUI}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_af8402e9186bd49e9504baecb3e41733f}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!hash\_pin\_with\_sha256@{hash\_pin\_with\_sha256}}
+\index{hash\_pin\_with\_sha256@{hash\_pin\_with\_sha256}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{hash\_pin\_with\_sha256()}{hash\_pin\_with\_sha256()}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_af8402e9186bd49e9504baecb3e41733f} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+hash\+\_\+pin\+\_\+with\+\_\+sha256 (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{pin}{}\end{DoxyParamCaption})}
+
+
+
+It hashes the pin provided with SHA256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & (int)\+: the pin provided\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(bytes) hash of the pin 
+\end{DoxyReturn}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_aadb5cd9364c7f706217b574936b96a65}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!write\_private\_key\_to\_pendrive@{write\_private\_key\_to\_pendrive}}
+\index{write\_private\_key\_to\_pendrive@{write\_private\_key\_to\_pendrive}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{write\_private\_key\_to\_pendrive()}{write\_private\_key\_to\_pendrive()}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_aadb5cd9364c7f706217b574936b96a65} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+write\+\_\+private\+\_\+key\+\_\+to\+\_\+pendrive (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{key\+\_\+priv\+\_\+with\+\_\+aes}{}\end{DoxyParamCaption})}
+
+
+
+It writes the private key to a .pem file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+priv\+\_\+with\+\_\+aes} & (bytes)\+: the encrypted private key \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9b4b92315ffe2a72e259e1b472f6fd68}\index{AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}!\_constants@{\_constants}}
+\index{\_constants@{\_constants}!AuxiliaryKeyCreator.AuxiliaryKeyCreator@{AuxiliaryKeyCreator.AuxiliaryKeyCreator}}
+\doxysubsubsection{\texorpdfstring{\_constants}{\_constants}}
+{\footnotesize\ttfamily \label{class_auxiliary_key_creator_1_1_auxiliary_key_creator_a9b4b92315ffe2a72e259e1b472f6fd68} 
+Auxiliary\+Key\+Creator.\+Auxiliary\+Key\+Creator.\+\_\+constants\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ Constants(LENGTH\_OF\_RSA\_KEY=4096,\ KEY\_FORMAT=\textcolor{stringliteral}{'PEM'},\ CIPHER\_MODE=AES.MODE\_CBC,\ PATH\_FOR\_TO\_\_PUBLIC\_KEY\_FILE=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}C:/Studia/BSK/ProjektBSK/AuxiliaryApp"{}})}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Auxiliary\+Key\+Creator.\+py\end{DoxyCompactItemize}
